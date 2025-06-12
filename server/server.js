@@ -16,7 +16,7 @@ app.get('/', (req, res) => res.send('API Working'));
 app.get("/debug-sentry", function mainHandler(req, res) {
   throw new Error("My first Sentry error!");
 });
-app.post('/webhook', clerkwebhooks);
+app.post('/webhooks', clerkwebhooks);
 
 const PORT = process.env.port || 5000;
 Sentry.setupExpressErrorHandler(app);
