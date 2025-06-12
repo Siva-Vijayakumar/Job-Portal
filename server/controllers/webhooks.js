@@ -3,7 +3,14 @@ import User from "../models/User.js";
 
 export const clerkwebhooks = async (req, res) => {
     try {
+        console.log("CLERK_WEBHOOK_SECRET:", process.env.CLERK_WEBHOOK_SECRET ? "✅ set" : "❌ missing");
+        console.log("MONGODB_URI:", process.env.MONGODB_URI ? "✅ set" : "❌ missing");
+
         const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET);
+
+        console.log("Headers:", req.headers);
+        console.log("Body:", JSON.stringify(req.body, null, 2));
+
 
         await whook.verify(JSON.stringify(req.body),{
             "svix-id" : req.headers["svix-id"],

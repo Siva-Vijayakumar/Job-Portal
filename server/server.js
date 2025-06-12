@@ -12,11 +12,12 @@ await connectDB();
 app.use(cors());
 app.use(express.json());
 
+app.post('/webhooks', clerkwebhooks);
+
 app.get('/', (req, res) => res.send('API Working'));
 app.get("/debug-sentry", function mainHandler(req, res) {
   throw new Error("My first Sentry error!");
 });
-app.post('/webhooks', clerkwebhooks);
 
 const PORT = process.env.port || 5000;
 Sentry.setupExpressErrorHandler(app);
