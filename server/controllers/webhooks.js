@@ -7,7 +7,7 @@ export const clerkwebhooks = async (req, res) => {
 
         await whook.verify(JSON.stringify(req.body),{
             "svix-id" : req.headers["svix-id"],
-            "svix-timesnap" : req.headers["svix-timesnap"],
+            "svix-timestamp" : req.headers["svix-timestamp"],
             "svix-signature": req.headers["svix-signature"]
         })
 
@@ -18,7 +18,7 @@ export const clerkwebhooks = async (req, res) => {
 
                 const userData = {
                     _id : data.id,
-                    email : data.email_addresses[0].email_addresses,
+                    email : data.email_addresses[0].email_address,
                     name : data.first_name + " " + data.last_name,
                     image : data.image_url,
                     resume : ''
