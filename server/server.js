@@ -12,7 +12,7 @@ await connectDB();
 app.use(cors());
 app.use(express.json());
 
-app.post('/webhooks', clerkwebhooks);
+app.post('/webhooks', express.raw({ type: 'application/json' }), clerkwebhooks);
 
 app.get('/', (req, res) => res.send('API Working'));
 app.get("/debug-sentry", function mainHandler(req, res) {

@@ -21,7 +21,7 @@ export const clerkwebhooks = async (req, res) => {
         const {data, type} = req.body;
 
         switch (type) {
-            case "user-created":{
+            case "user.created":{
 
                 const userData = {
                     _id : data.id,
@@ -36,7 +36,7 @@ export const clerkwebhooks = async (req, res) => {
 
             }
             
-            case "user-updated" :{
+            case "user.updated" :{
                 const userData = {
                     email : data.email_addresses[0].email_address,
                     name : data.first_name + " " + data.last_name,
@@ -47,7 +47,7 @@ export const clerkwebhooks = async (req, res) => {
                 break;
             }
 
-            case "user-deleted" : {
+            case "user.deleted" : {
                 await User.findByIdAndDelete(data.id);
                 res.json({});
                 break;
