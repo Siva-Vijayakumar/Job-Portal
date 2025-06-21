@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
-import { assets } from '../assets/assets'
-import { AppContext } from '../context/AppContext';
+import { assets } from '../assets/assets.jsx'
+import { AppContext } from '../context/AppContext.jsx';
 import { useContext } from 'react';
 
 const Dashboard = () => {

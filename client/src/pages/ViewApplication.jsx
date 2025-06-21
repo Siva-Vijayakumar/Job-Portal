@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { assets, viewApplicationsPageData } from '../assets/assets'
-import { AppContext } from '../context/AppContext'
+import { assets, viewApplicationsPageData } from '../assets/assets.jsx'
+import { AppContext } from '../context/AppContext.jsx'
 import axios from 'axios';
-import Loading from '../components/Loading';
+import Loading from '../components/Loading.jsx';
 
 const ViewApplication = () => {
   

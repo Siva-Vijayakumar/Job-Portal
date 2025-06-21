@@ -3,12 +3,12 @@ import { manageJobsData } from '../assets/assets'
 import moment from 'moment'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
-import { AppContext } from '../context/AppContext'
+import { AppContext } from '../context/AppContext.jsx'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { toast } from 'react-toastify'
 import axios from 'axios'
-import Loading from '../components/Loading'
+import Loading from '../components/Loading.jsx'
 
 const ManageJobs = ()  => {
 
