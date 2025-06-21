@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { assets, viewApplicationsPageData } from '../assets/assets.jsx'
+import { assets, viewApplicationsPageData } from '../assets/assets.js'
 import { AppContext } from '../context/AppContext.jsx'
 import axios from 'axios';
 import Loading from '../components/Loading.jsx';

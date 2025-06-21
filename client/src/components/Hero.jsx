@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react'
-import { assets } from '../assets/assets.jsx'
+import { assets } from '../assets/assets.js'
 import { AppContext } from '../context/AppContext.jsx';
 
 const Hero = () => {

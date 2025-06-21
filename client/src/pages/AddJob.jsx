@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Quill from 'quill';
-import { JobCategories, JobLocations } from '../assets/assets.jsx';
+import { JobCategories, JobLocations } from '../assets/assets.js';
 import axios from 'axios';
 import { useContext } from 'react';
 import { AppContext } from '../context/AppContext.jsx';

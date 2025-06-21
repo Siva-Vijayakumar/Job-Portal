@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import NavBar from '../components/NavBar'
-import { assets, jobsApplied } from '../assets/assets.jsx';
+import { assets, jobsApplied } from '../assets/assets.js';
 import moment from 'moment';
 import Footer from '../components/Footer.jsx';
 import { AppContext } from '../context/AppContext.jsx';
