@@ -8,7 +8,7 @@ import RecruiterLogin from './components/RecruiterLogin.jsx'
 import { AppContext } from './context/AppContext.jsx'
 import ManageJobs from './pages/ManageJobs.jsx'
 import Dashboard from './pages/Dashboard.jsx'
-import AddJob from './pages/AddJOb.jsx'
+import AddJob from './pages/AddJob.jsx'
 import ViewApplication from './pages/ViewApplication.jsx'
 import 'quill/dist/quill.snow.css';
 import { ToastContainer, toast } from 'react-toastify';
